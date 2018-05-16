@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Dojo Survey</title>
+    </head>
+    <body>
+        <div class = "wrapper">
+            <form action='/surveys/process' method='post'>
+                {% csrf_token %}
+                <div id = "name_box">
+                    <label id = "l_name"for = "name">Name:</label>
+                    <input id = "name" type='text' name='name'>
+                </div>
+                <div id = "local_box">
+                    <label id = "l_local" for = "location">Dojo Location:</label>
+                    <select id = "local" name = "location">
+                        <option value = "San Jose">San Jose</option>
+                        <option value = "San Fransico">San Fransico</option>
+                        <option value = "Burbank">Burbank</option>
+                    </select>
+                </div>
+                <div id = "fav_box">
+                    <label id = "l_fav" for = "language">Favorite Language:</label>
+                    <select id = "lang" name = "language">
+                        <option value = "python">Python</option>
+                        <option value = "c++">C++</option>
+                        <option value = "java">Java</option>
+                    </select>
+                </div>
+                <div id = "com_box">
+                    <label id = "l_com"for = "comment">Comment:</label>
+                    <textarea name = "comment"></textarea>
+                </div>
+                <input type='submit' value='Submit'>
+            </form>
+        </div>
+    </body>
+</html>
