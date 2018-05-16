@@ -3,8 +3,8 @@ def index(request):
     return render(request, "survey/index.html")
 
 def process(request):
-    name = request.form['name']
+    full_name = request.form['full_name']
     comment = request.form['comment']
     language = request.form.get('language',None)
     place = request.form.get('location',None)
-    return render(request,'survey/result.html',name=name,comment=comment,language=language,place=place)
+    return render(request,'survey/result.html',full_name=full_name,comment=comment,language=language,place=place)
